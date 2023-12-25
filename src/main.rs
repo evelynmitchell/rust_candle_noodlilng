@@ -21,7 +21,7 @@ fn main() -> Result<()> {
     let second = Tensor::randn(0f32, 1.0, (100, 10), &device)?;
     let model = Model { first, second };
 
-    let dummy_image = Tensor::randn(0f32, 1.0, (1,768), &device)?;
+    let dummy_image = Tensor::randn(0f32, 1.0, (1,784), &device)?;
     
     let digit = model.forward(&dummy_image)?;
     println!("Digit {digit:?} digit");
