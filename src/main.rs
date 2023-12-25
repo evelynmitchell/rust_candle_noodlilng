@@ -7,7 +7,7 @@ struct Model {
 
 impl Model {
     fn forward(&self, image: & Tensor) -> Result<Tensor> {
-        let x = image.matmul(&self.first)?:
+        let x = image.matmul(&self.first)?;
         let x = x.relu()?;
         x.matmul(&self.second)
     }
