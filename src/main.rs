@@ -1,4 +1,4 @@
-use candle_core::{Device, Result, Tensor}:
+use candle_core::{Device, Result, Tensor};
 
 struct Model {
     first: Tensor,

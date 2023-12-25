@@ -50,3 +50,38 @@ I believe ? means the operation may fail or not produce a result. [1] Yeah, it's
 [1](https://doc.rust-lang.org/book/appendix-02-operators.html)
 
 ## Compiling
+
+I'm running this within colab, so when I checked out this repository, it created a directory under myapp, which is the wrong location.
+
+```
+!git clone https://github.com/evelynmitchell/rust_candle_noodlilng.git
+```
+
+Rust is very opinionated (in a good way), about the locations of files, so I need to move main.rs into the correct location.
+
+```
+%cp rust_candle_noodlilng/src/main.rs ../myapp/src/main.rs
+```
+
+And  then try the build:
+```
+!cargo build
+```
+
+My first att3empt had a typo:
+```
+Compiling myapp v0.1.0 (/content/myapp)
+error: expected `;`, found `:`
+ --> src/main.rs:1:42
+  |
+1 | use candle_core::{Device, Result, Tensor}:
+  |                                          ^ expected `;`
+  |
+  = note: glob-like brace syntax must be last on the path
+
+error: could not compile `myapp` (bin "myapp") due to previous error
+```
+
+Fixed.
+
+Rust has the most helpful error messages!
