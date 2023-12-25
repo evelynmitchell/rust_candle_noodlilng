@@ -85,3 +85,12 @@ error: could not compile `myapp` (bin "myapp") due to previous error
 Fixed.
 
 Rust has the most helpful error messages!
+
+Ok once I got a compilable source file,  the candle-crate cuda error came back, so I commented it out, and reinstalled it:
+```
+!cargo add --git https://github.com/huggingface/candle.git candle-core #--features "cuda"
+```
+Then did a build:
+```
+!cargo build
+```
