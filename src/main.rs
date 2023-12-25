@@ -18,7 +18,7 @@ fn main() -> Result<()> {
     let device = Device::new_cuda(0)?;
 
     let first = Tensor::randn(0f32, 1.0, (784,100), &device)?;
-    let second = Tensor::randn(0f32, 1.0 (100, 10), &device)?;
+    let second = Tensor::randn(0f32, 1.0, (100, 10), &device)?;
     let model = Model { first, second };
 
     let dummy_image = Tensor::randn(0f32, 1.0, (1,768), &device)?;
